@@ -55,38 +55,44 @@
 </nav>
 
 <section class="hero">
+  <!-- <div class="hero-body" style="margin-bottom: -80px;"> -->
   <div class="hero-body" style="margin-bottom: -80px;">
+
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
             RobiButler: Remote Multimodal Interactions with Household Robot Assistant
           </h1>
-          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.robot-learning.org/">under construction
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.robot-learning.org/">Under construction
           </a></h3>
           <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block">
+            <span class="author-block">
               <a target="_blank" href="https://anxingxiao.com/">Anxing Xiao</a>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.linkedin.com/in/tianrun-hu-ba9b771b3/?originalSubdomain=sg">Tianrun Hu</a>,</span>
             <span class="author-block">
               <a target="_blank" href="">Anshul Gupta</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="https://www.yuhongdeng.com/">Yuhong Deng</a>,</span>
+              <a target="_blank" href="https://scholar.google.com/citations?hl=en&user=crl_1igAAAAJ&view_op=list_works&sortby=pubdate">Kaixin Li</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=crl_1igAAAAJ">Kaixin Li</a>,
-            </span>
+              <a target="_blank" href="https://scholar.google.com/citations?user=4xwyGM8AAAAJ&hl=en">Cunjun Yu</a>,</span>
             <span class="author-block">
-              <a target="_blank" href="https://www.comp.nus.edu.sg/~dyhsu/">David Hsu</a>
-            </span> -->
-            under construction
+              <a target="_blank" href="https://nuwanjanaka.info/">Nuwan Janaka</a>,</span>
+            <span class="author-block">
+              <a target="_blank" href="https://www.comp.nus.edu.sg/~dyhsu/">David Hsu</a></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">School of Computing, National University of Singapore</span>
-            <!-- <span class="author-block">Smart Systems Institute, National University of Singapore</span> -->
+            <span class="author-block"> School of Computing & Smart Systems Institute</span>
+            <br>
+            <span class="author-block">
+              National University of Singapore
+            </span>
           </div>
           <div class="column has-text-centered">
             <span class="link-block">
-              <a target="_blank" href="https://openreview.net/pdf?id=FH03VfMqOR"
+              <a target="_blank" href=""
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -107,7 +113,7 @@
             </span>
 
             <span class="link-block">
-              <a target="_blank" href="media/doc/prompt_for_LLM.txt"
+              <a target="_blank" href="media/doc/prompt_for_robibutler.txt"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fas fa-file"></i>
@@ -115,7 +121,6 @@
                 <span>Prompt</span>
                 </a>
             </span>
-
         </div>
       </div>
     </div>
@@ -125,36 +130,130 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-
-
-
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-
+      <div class="column is-full">
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/mf4WLQFGa8c?si=Lu0weqgW-hNA2OPF"
+          <iframe src="https://youtu.be/jJDpSZnDR6A"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
 
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full" style="margin-bottom: -80px;">  
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-
           <p>
             In this paper, we introduce RobiButler, a novel household robotic system that enables multimodal interactions with remote users
             Building on the advanced communication interfaces, RobiButler allows users to monitor the robot's status, send text or voice instructions, and select target objects by hand pointing.
-            At the core of our system is a high-level behavior module, powered by Large Language Models (LLMs), that interprets multimodal instructions to generate action plans. These plans are composed by a set of open vocabulary primitives supported by Vision Language Models (VLMs) that handle both text and pointing queries.
+            At the core of our system is a high-level behavior module, powered by Large Language Models (LLMs), that interprets multimodal instructions to generate action plans. These plans are composed by a set of open vocabulary primitives supported by Vision Language Models (VLMs) that handle both text and pointing queries.  
             The integration of the above components allows RobiButler to ground remote multimodal instructions in the real-world home environment in a zero-shot manner. 
-            We demonstrate the effectiveness and efficiency of this system using a variety of daily household tasks that involve remote users giving multimodal instructions. Additionally, we conducted an intensive user study to deeply analysis how multimodal interaction affects efficiency and user experience during remote human-robot interaction.          </p>
+            We demonstrate the effectiveness and efficiency of this system using a variety of daily household tasks that involve remote users giving multimodal instructions. Additionally, we conducted an intensive user study to deeply analysis how multimodal interaction affects efficiency and user experience during remote human-robot interaction.        
+          </p>
+          <br>
+          <br>
         </div>
       </div>
     </div>
   </div>
 
 
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Overall Framework</h2>
+        <div class="content has-text-justified">
+          <p>
+            The robot system consists of three components: Communication
+            Interfaces, High-level Behavior Manager, and Fundamental Skills. The Communication Interfaces transmit the inputs received from the remote user to the
+            High-level Behavior Module, which composes the Fundamental Skill to interact with the environment to fulfill the instructions or answer questions.
+          </p>
+        </div>
+        <img src="./media/figures/framework_robi.png" class="interpolation-image" alt="Framework for RobiButler">
+      </div>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop" >
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Tasks for Experiment I</h2>
+      </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 1: Throw target avocado into the trash can</h3>
+          <video poster="" id="task1" controls loop playsinline height="100%">
+            <source src="./media/video/T1_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 2: Check the beer inside the fridge</h3>
+          <video poster="" id="task2" controls loop playsinline height="100%">
+            <source src="./media/video/T2_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 3: Check medicine on the coffee table and bring target one to the sofa</h3>
+          <video poster="" id="task3" controls loop playsinline height="100%">
+            <source src="./media/video/T3_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 4: Describe the target object in the cabinet</h3>
+          <video poster="" id="task4" controls loop playsinline height="100%">
+            <source src="./media/video/T4_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 5: Bring the target drink to the coffee table</h3>
+          <video poster="" id="task5" controls loop playsinline height="100%">
+            <source src="./media/video/T5_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 6: Move the target cup to the kitchen counter</h3>
+          <video poster="" id="task6" controls loop playsinline height="100%">
+            <source src="./media/video/T6_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 7: Fetch the target remote and place it on the sofa</h3>
+          <video poster="" id="task7" controls loop playsinline height="100%">
+            <source src="./media/video/T7_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 8: Navigate to a target chair and check if it's clean</h3>
+          <video poster="" id="task8" controls loop playsinline height="100%">
+            <source src="./media/video/T8_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 9: Check if the laptop is open</h3>
+          <video poster="" id="task9" controls loop playsinline height="100%">
+            <source src="./media/video/T9_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <h3 class="subtitle has-text-centered" style="margin-bottom: 3px; height: 2.5em; display: flex; align-items: center; justify-content: center; font-size: 1rem;">Task 10: Bring the target tool to the table</h3>
+          <video poster="" id="task10" controls loop playsinline height="100%">
+            <source src="./media/video/T10_upload.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
