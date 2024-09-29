@@ -56,7 +56,7 @@
 
 <section class="hero">
   <!-- <div class="hero-body" style="margin-bottom: -80px;"> -->
-  <div class="hero-body" style="margin-bottom: -80px;">
+  <div class="hero-body" style="margin-bottom: 0px;">
 
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -103,7 +103,7 @@
 
             <!-- Video Link. -->
             <span class="link-block">
-              <a target="_blank" href="https://youtu.be/CloHyJkY0fg"
+              <a target="_blank" href="https://youtu.be/fAXlJf3tfUw"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-youtube"></i>
@@ -127,7 +127,7 @@
   </div>
 </section> 
 
-<section class="section">
+<section class="hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
@@ -139,7 +139,7 @@
     </div>
 
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full" style="margin-bottom: -30px;">  
+      <div class="column is-full" style="margin-bottom: 0px;">  
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -154,11 +154,12 @@
     </div>
   </div>
 
-
+<br>
+<br>
 </section>
 
-
-<section class="section">
+<section class="hero is-light">
+  <br>
   <div class="container is-max-desktop">
     <!-- method. -->
     <div class="columns is-centered has-text-centered">
@@ -176,15 +177,16 @@
     </div>
     
   </div>
-  
+  <br>
+  <br>
 </section>
 
-
-<section class="hero is-light is-small">
+<section class="hero is-small">
+  <br>
   <div class="hero-body">
     <div class="container is-max-desktop" >
       <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Tasks for Experiment I</h2>
+        <h2 class="title is-3">Tasks for Experiments</h2>
       </div>
 
       <div id="results-carousel" class="carousel results-carousel">
@@ -251,6 +253,55 @@
       </div>
     </div>
   </div>
+
+  <br>
+</section>
+
+
+<section class="hero is-light">
+  <br>
+  <div class="container is-max-desktop ">
+    <div class="column is-full has-text-centered">
+      <h2 class="title is-3">The baselines in Experiment II</h2>
+    </div>
+    <br>
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered" >
+        <div class="content">
+          <h3 class="title">Gesture Only</h2>
+          <p>
+            This baseline only uses gesture to interact with the robot. Here we implement several buttons to represent actions.
+          </p>
+          <video id="dollyzoom" controls muted loop playsinline height="100%">
+            <source src="./media/video/button.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column has-text-centered">
+        <div class="content">
+
+          <h3 class="title">Voice Only</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                This baseline only uses voice to interact with the robot. We adopt <a href="https://jxu124.github.io/TiO/">TIO</a> as the visual grounding module.
+              </p>
+              <video id="matting-video" controls playsinline height="100%">
+                <source src="./media/video/language.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <br>
 </section>
 
 
